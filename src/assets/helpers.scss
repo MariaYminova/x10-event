@@ -1,0 +1,71 @@
+.color {
+  color: #ffffff;
+
+  &__black {
+    color: #18171f;
+  }
+
+  &__orange {
+    color: #ff7f00;
+  }
+
+  &__blue {
+    color: #00bfff;
+  }
+
+  &__green {
+    color: #52c097;
+  }
+
+  &__gray {
+    color: #97959d;
+  }
+
+  &__orange-50 {
+    color: #c07939;
+  }
+
+  &__blue-50 {
+    color: #0c6a8f;
+  }
+
+  &__green-50 {
+    color: #356b5a;
+  }
+}
+
+.bg-color {
+  background-color: #ffffff;
+
+  &__black {
+    background-color: #18171f;
+  }
+
+  &__orange {
+    background-color: #ff7f00;
+  }
+
+  &__blue {
+    background-color: #00bfff;
+  }
+
+  &__green {
+    background-color: #52c097;
+  }
+
+  &__gray {
+    background-color: #97959d;
+  }
+
+  &__orange-50 {
+    background-color: #c07939;
+  }
+
+  &__blue-50 {
+    background-color: #0c6a8f;
+  }
+
+  &__green-50 {
+    background-color: #356b5a;
+  }
+}
