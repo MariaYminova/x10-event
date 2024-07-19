@@ -1,1 +1,0 @@
-import{_ as o,o as a,c as s,e as n}from"./index-Dn0bOdrl.js";const t={name:"HeadingName"},c={class:"heading-name color"};function r(e,d,_,i,l,m){return a(),s("div",c,[n(e.$slots,"default")])}const f=o(t,[["render",r]]);export{f as H};
