@@ -10,10 +10,11 @@
           <span>Райан Гослинг</span>
         </HeadingName>
       </div>
-      <span>Комментарий</span>
-      <textarea class="results-organizer-page__comment bg-color__black" name="bio" rows="5" maxlength="200"
-        placeholder="Комментарий">Пример комментария
-    </textarea>
+      <div class="results-organizer-page__comment">
+        <span class="results-organizer-page__comment-title">Комментарий</span>
+        <textarea class="results-organizer-page__comment-text bg-color__black" name="comment" rows="5" maxlength="200"
+          placeholder="Пример комментария"></textarea>
+      </div>
       <div class="results-organizer-page__rating">
         <div class="results-organizer-page__rating-item">
           <span>Заинтересовал на - {{ interest }}</span>
@@ -68,15 +69,16 @@ export default {
 .results-organizer-page {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100% - 146px);
 
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 0 40px;
+    padding:0 20px 20px;
     flex: 1;
+    overflow: auto;
   }
 
   &__info {
@@ -98,12 +100,21 @@ export default {
   }
 
   &__comment {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    resize: none;
-    padding: 10px;
-    color: #fff;
+    &-title {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      resize: none;
+      padding: 10px;
+      color: #fff;
+    }
   }
 
   &__rating {
@@ -119,6 +130,8 @@ export default {
   }
 
   &__footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     height: 70px;
     padding: 20px 10px;
