@@ -49,9 +49,15 @@ export default {
   justify-content: space-between;
 
   &__photo {
-    margin-bottom: 10px;
+    border-radius: 50%;
     width: 120px;
     height: 120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    position: relative;
   }
 
   &__name {

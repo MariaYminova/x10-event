@@ -248,9 +248,9 @@ export default {
     cursor: pointer;
   }
 
-  &__button:hover {
-    background-color: #1976d2;
-  }
+  // &__button:hover {
+  //   background-color: #1976d2;
+  // }
 }
 
 .switch-container {

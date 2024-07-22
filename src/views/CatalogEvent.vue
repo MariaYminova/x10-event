@@ -1,14 +1,14 @@
 <template>
-  <div class="event-flag">
-    <div class="event-flag__info">
+  <div class="catalog-event">
+    <div class="catalog-event__info">
       <Heading> Мероприятие </Heading>
-      <div class="event-flag__photo"><EventImg /></div>
+      <div class="catalog-event__photo"><EventImg /></div>
 
       <HeadingName style="margin-bottom: 10px"> Сила духа</HeadingName>
       <HeadingGray class="color__gray"> Москва</HeadingGray>
       <HeadingDate class="color__gray"> 01.08.2024</HeadingDate>
       <HeadingPlace class="color__gray"> БЦ "Вавилон"</HeadingPlace>
-      <div class="event-flag__wrap">
+      <div class="catalog-event__wrap">
         <ParagraphText>
           Значимость этих проблем настолько очевидна, что рамки и место обучения
           кадров позволяет выполнять важные задания по разработке дальнейших
@@ -24,10 +24,11 @@
           соответствующий условий активизации.</ParagraphText
         >
       </div>
-      <RouterLink to="/search-contacts-page"> <BtnSearchContacts /></RouterLink>
+
+      <BtnSearchContactsAccess />
     </div>
 
-    <div class="event-flag__footer bg-color__black">
+    <div class="catalog-event__footer bg-color__black">
       <BtnMain /> <BtnAccount />
     </div>
   </div>
@@ -46,9 +47,10 @@ import ParagraphText from "@/components/ParagraphText.vue";
 import BtnSearchContacts from "@/components/btn/BtnSearchContacts.vue";
 import BtnAccount from "@/components/btn/BtnAccount.vue";
 import BtnMain from "@/components/btn/BtnMain.vue";
+import BtnSearchContactsAccess from "@/components/btn/BtnSearchContactsAccess.vue";
 
 export default {
-  name: "EventFlag",
+  name: "CatalogEvent",
 
   components: {
     Heading,
@@ -61,12 +63,13 @@ export default {
     BtnSearchContacts,
     BtnAccount,
     BtnMain,
+    BtnSearchContactsAccess,
   },
 };
 </script>
 
 <style lang="scss">
-.event-flag {
+.catalog-event {
   display: flex;
   flex-direction: column;
   align-items: center;

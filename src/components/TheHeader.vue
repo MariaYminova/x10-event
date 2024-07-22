@@ -5,10 +5,14 @@
 </template>
 
 <script>
+
+
 export default {
   name: "TheHeader",
 
-  components: {},
+  components: {
+
+  },
 };
 </script>
 

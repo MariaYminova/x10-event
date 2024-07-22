@@ -10,10 +10,11 @@ export default {
 
 <style lang="scss">
 .btn-save {
-  padding: 7px 30px;
+  padding: 5px 30px;
   text-align: center;
   border-radius: 5px;
   font-size: 14px;
+  font-weight: 500;
   // box-shadow: 10px 5px 5px rgb(255, 255, 255);
 }
 </style>

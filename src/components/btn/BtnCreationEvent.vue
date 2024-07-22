@@ -18,5 +18,6 @@ export default {
   text-align: center;
   border-radius: 5px;
   font-size: 14px;
+  font-weight: 500;
 }
 </style>

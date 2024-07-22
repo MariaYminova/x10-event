@@ -12,11 +12,12 @@ export default {
 
 <style lang="scss">
 .btn-change-data {
-  padding: 7px 30px;
+  padding: 5px 30px;
   height: 30px;
   text-align: center;
   border-radius: 5px;
   font-size: 14px;
+  font-weight: 500;
   border: 1px solid #ff7f00;
 }
 </style>

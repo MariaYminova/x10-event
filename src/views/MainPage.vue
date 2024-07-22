@@ -1,14 +1,27 @@
 <template>
   <div class="main-page">
+   
     <div class="main-page__info">
+      <div style="display: flex; gap: 10px;">
+      <BtnCreationEvent class="main-page__btn-creation-event" /> <BtnRating />
+    </div>
       <Heading> Каталог мероприятий </Heading>
-      <BtnCreationEvent class="main-page__btn-creation-event" />
-      <EventCard class="main-page__event-card" />
-      <EventCard class="main-page__event-card" />
+
+      <RouterLink to="/catalog-event">
+        <EventCard class="main-page__event-card"
+      /></RouterLink>
+
+      <RouterLink to="/catalog-event">
+        <EventCard class="main-page__event-card"
+      /></RouterLink>
+
+      <RouterLink to="/catalog-event">
+        <EventCard class="main-page__event-card"
+      /></RouterLink>
     </div>
 
     <div class="main-page__footer bg-color__black">
-      <BtnRating /> <BtnMain /> <BtnAccount />
+      <BtnMain /> <BtnAccount />
     </div>
   </div>
 </template>
@@ -95,6 +108,7 @@ export default {
 
   &__event-card {
     margin-bottom: 10px;
+    width: 100%;
   }
 
   &__btn-creation-event {

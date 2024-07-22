@@ -66,7 +66,7 @@ import TheForm from "@/components/forms/TheForm.vue";
 import BtnMain from "@/components/btn/BtnMain.vue";
 import BtnChangeData from "@/components/btn/BtnChangeData.vue";
 import BtnAccount from "@/components/btn/BtnAccount.vue";
-import StatisticalBlock from "@/components/StatisticalBlock.vue";
+
 
 export default {
   name: "AccountPage",
@@ -79,7 +79,7 @@ export default {
     BtnMain,
     BtnChangeData,
     BtnAccount,
-    StatisticalBlock,
+   
   },
 };
 </script>
@@ -94,9 +94,15 @@ export default {
   justify-content: space-between;
 
   &__photo {
-    margin-bottom: 10px;
+    border-radius: 50%;
     width: 120px;
     height: 120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    position: relative;
   }
 
   &__name {
@@ -116,11 +122,11 @@ export default {
   &__info {
     display: flex;
     width: 100%;
-    justify-content: space-between;
   }
 
   &__info-name {
     max-width: 200px;
+    margin-left: 20px;
   }
 
   &__statistical-wrap {
