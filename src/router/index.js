@@ -49,6 +49,11 @@ const router = createRouter({
       name: "results-player-page",
       component: () => import("../views/ResultsPlayerPage.vue"),
     },
+    {
+      path: "/results-organizer-page",
+      name: "results-organizer-page",
+      component: () => import("../views/ResultsOrganizerPage.vue"),
+    },
   ],
 });
 
