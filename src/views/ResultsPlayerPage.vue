@@ -61,15 +61,16 @@ export default {
 .results-player-page {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100% - 146px);
 
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 0 20px;
+    padding:0 20px 20px;
     flex: 1;
+    overflow: auto;
   }
 
   &__info {
@@ -120,6 +121,8 @@ export default {
   }
 
   &__footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     height: 70px;
     padding: 20px 10px;
