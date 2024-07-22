@@ -17,12 +17,13 @@
     </div>
     <div class="rating-page__wrap">
       <div v-if="activeTab === 'players'" class="rating-page__tab">
-        <RatingCardPlayer class="rating-page__card" />
-        <RatingCardPlayer class="rating-page__card" />
-        <RatingCardPlayer class="rating-page__card" />
+
+        <RouterLink to="/viewing-profile"> <RatingCardPlayer class="rating-page__card" /></RouterLink>
+        <RouterLink to="/viewing-profile"> <RatingCardPlayer class="rating-page__card" /></RouterLink>
+        <RouterLink to="/viewing-profile"> <RatingCardPlayer class="rating-page__card" /></RouterLink>
       </div>
       <div v-else class="rating-page__tab">
-        <RatingCardPlayer class="rating-page__card" />
+        <RouterLink to="/viewing-profile"> <RatingCardPlayer class="rating-page__card" /></RouterLink>
       </div>
     </div>
 

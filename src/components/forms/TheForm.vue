@@ -19,11 +19,11 @@ export default {
 
 <style lang="scss">
 .the-form {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100%;
 
   &__heading {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 10px;
   }
@@ -32,10 +32,11 @@ export default {
     width: 100%;
     border-radius: 10px;
     border: 1px solid #fff;
-    overflow-x: scroll;
     resize: none;
     padding: 10px;
     color: #fff;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
 </style>
