@@ -10,19 +10,20 @@
           <span>Райан Гослинг</span>
         </HeadingName>
       </div>
-      <span>Комментарий</span>
-      <textarea class="results-player-page__comment bg-color__black" name="bio" rows="5" maxlength="200"
-        placeholder="Комментарий">Пример комментария
-    </textarea>
+      <div class="results-player-page__comment">
+        <span class="results-player-page__comment-title">Комментарий</span>
+        <textarea class="results-player-page__comment-text bg-color__black" name="comment" rows="5" maxlength="200"
+          placeholder="Пример комментария"></textarea>
+      </div>
       <div class="results-player-page__results">
         <div class="results-player-page__results-item">
-          <input type="checkbox" disabled><span>Победил</span>
+          <input type="checkbox"><span>Победил</span>
         </div>
         <div class="results-player-page__results-item">
-          <input type="number" disabled><span>Заработал</span>
+          <input type="number"><span>Заработал</span>
         </div>
         <div class="results-player-page__results-item">
-          <input type="number" disabled><span>Предприятия</span>
+          <input type="text"><span>Предприятия</span>
         </div>
       </div>
       <BtnSave />
@@ -67,7 +68,7 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 0 40px;
+    padding: 0 20px;
     flex: 1;
   }
 
@@ -90,12 +91,21 @@ export default {
   }
 
   &__comment {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    resize: none;
-    padding: 10px;
-    color: #fff;
+    &-title {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      resize: none;
+      padding: 10px;
+      color: #fff;
+    }
   }
 
   &__results {
