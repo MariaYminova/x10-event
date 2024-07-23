@@ -45,11 +45,19 @@ const router = createRouter({
       component: () => import("../views/RatingPage.vue"),
     },
     {
+      path: "/results-player-page",
+      name: "results-player-page",
+      component: () => import("../views/ResultsPlayerPage.vue"),
+    },
+    {
+      path: "/results-organizer-page",
+      name: "results-organizer-page",
+      component: () => import("../views/ResultsOrganizerPage.vue"),
+    },
       path: "/viewing-profile",
       name: "viewing-profile",
       component: () => import("../views/ViewingProfile.vue"),
     },
-   
   ],
 });
 
