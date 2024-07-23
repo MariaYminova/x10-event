@@ -1,8 +1,10 @@
 <template>
   <div class="catalog-event">
     <div class="catalog-event__info">
-      <Heading> Мероприятие </Heading>
-      <div class="catalog-event__photo"><EventImg /></div>
+      <Heading> Игра </Heading>
+      <div class="catalog-event__photo">
+        <EventImg />
+      </div>
 
       <HeadingName style="margin-bottom: 10px"> Сила духа</HeadingName>
       <HeadingGray class="color__gray"> Москва</HeadingGray>
@@ -21,15 +23,15 @@
           по разработке направлений прогрессивного развития. Значимость этих
           проблем настолько очевидна, что дальнейшее развитие различных форм
           деятельности в значительной степени обуславливает создание
-          соответствующий условий активизации.</ParagraphText
-        >
+          соответствующий условий активизации.</ParagraphText>
       </div>
 
-      <BtnSearchContactsAccess />
+      <RouterLink to="/" class="catalog-event__btn">Перейти в игру</RouterLink>
     </div>
 
     <div class="catalog-event__footer bg-color__black">
-      <BtnMain /> <BtnAccount />
+      <BtnMain />
+      <BtnAccount />
     </div>
   </div>
 </template>
@@ -109,6 +111,16 @@ export default {
     margin: 20px 10px;
     width: 100%;
     padding: 0 10px;
+  }
+
+  &__btn {
+    padding: 5px 30px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    // box-shadow: 10px 5px 5px rgb(255, 255, 255);
+    border: 1px solid #ff7f00;
   }
 
   &__footer {
