@@ -10,9 +10,9 @@
           <span>Райан Гослинг</span>
         </HeadingName>
       </div>
-      <div class="results-player-page__comment-container">
-        <span class="results-player-page__comment-title">Комментарий</span>
-        <textarea class="results-player-page__comment bg-color__black" name="comment" rows="5" maxlength="200"
+      <div class="results-organizer-page__comment-container">
+        <span class="results-organizer-page__comment-title">Комментарий</span>
+        <textarea class="results-organizer-page__comment bg-color__black" name="comment" rows="5" maxlength="200"
           placeholder="Пример комментария"></textarea>
       </div>
       <div class="results-organizer-page__rating-container">
