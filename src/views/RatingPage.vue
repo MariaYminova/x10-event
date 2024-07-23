@@ -153,7 +153,6 @@ export default {
   justify-content: space-between;
 
   &__tabs {
-    display: flex;
     justify-content: center;
     margin-bottom: 15px;
 
@@ -194,6 +193,7 @@ export default {
 
   &__card {
     margin-bottom: 15px;
+    max-width: 390px;
   }
 
   &__footer {

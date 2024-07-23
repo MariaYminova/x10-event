@@ -4,8 +4,9 @@
       <Heading> Регистрация аккаунта </Heading>
       <div class="registration-page__photo"><UserPhoto /></div>
 
-      <HeadingName class="registration-page__name"> Иван Иванович </HeadingName>
+      
       <div class="registration-page__form-wrap">
+        <TheForm> Ваше имя </TheForm>
         <TheForm> Контакты </TheForm>
         <TheForm> Расскажите о себе</TheForm>
         <TheForm> Что хотите получить от сообщества</TheForm>
