@@ -60,9 +60,9 @@ const router = createRouter({
       component: () => import('../views/ViewingProfile.vue'),
     },
     {
-      path: '/organizer-page',
-      name: 'organizer-page',
-      component: () => import('../views/OrganizerPage.vue'),
+      path: '/participant-assessment',
+      name: 'participant-assessment',
+      component: () => import('../views/ParticipantAssessment.vue'),
     },
   ],
 })
