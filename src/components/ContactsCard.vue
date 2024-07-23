@@ -5,7 +5,8 @@
     </div>
 
     <div class="сontacts-сard__info-wrap">
-     <div class="сontacts-сard__name"> Иван Иванович</div>
+      <div class="сontacts-сard__name">{{ contact.name }}</div>
+      <p class="сontacts-сard__text">{{ contact.description }} </p>
     </div>
   </div>
 </template>
@@ -19,7 +20,14 @@ export default {
 
   components: {
     UserPhoto,
-    HeadingName
+    HeadingName,
+  },
+
+  props: {
+    contact: {
+      type: Object,
+      required: true,
+    },
   },
 };
 </script>
@@ -31,23 +39,28 @@ export default {
   padding: 10px;
   border-radius: 5px;
 
-  &__name{
+  &__text {
+    max-height: 60px;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__name {
     font-size: 16px;
     font-weight: 700;
+    margin-bottom: 5px;
   }
- 
 
   &__photo-wrap {
-    border-radius: 50%;
     width: 70px;
     height: 70px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0;
-    position: relative;
-    margin-right: 20px ;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  &__info-wrap {
+    flex-grow: 1; 
   }
 }
 </style>
