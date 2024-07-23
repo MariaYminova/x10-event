@@ -1,1 +1,0 @@
-import{_ as o,o as s,c as t}from"./index-CNTVE6ff.js";const e="/x10-event/assets/img-avatar-BuJF4KQM.jpg",r={name:"UserPhoto",components:{}},c={class:"user-photo",src:e,alt:"User Photo"};function n(a,_,p,m,i,h){return s(),t("img",c)}const l=o(r,[["render",n]]);export{l as U};

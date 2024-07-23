@@ -54,6 +54,10 @@ const router = createRouter({
       name: "results-organizer-page",
       component: () => import("../views/ResultsOrganizerPage.vue"),
     },
+      path: "/viewing-profile",
+      name: "viewing-profile",
+      component: () => import("../views/ViewingProfile.vue"),
+    },
   ],
 });
 

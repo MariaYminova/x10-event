@@ -1,28 +1,18 @@
 <template>
-
-    <img class="user-photo" src="@/img/img-avatar.jpg" alt="User Photo" />
-
+  <img class="user-photo" src="@/img/img-avatar.jpg" alt="" />
 </template>
 
 <script>
 export default {
-  name: "UserPhoto",
-
-  components: {},
+  name: "UserPhoto"
 };
 </script>
 
 <style lang="scss">
 .user-photo {
-  
-
-  
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 </style>

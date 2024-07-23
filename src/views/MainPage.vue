@@ -1,53 +1,111 @@
 <template>
   <div class="main-page">
-   
     <div class="main-page__info">
-      <div style="display: flex; gap: 10px;">
-      <BtnCreationEvent class="main-page__btn-creation-event" /> <BtnRating />
-    </div>
-      <Heading> Каталог мероприятий </Heading>
+      <div style="display: flex; gap: 10px">
+        <BtnCreationEvent class="main-page__btn-creation-event" />
+        <BtnRating />
+      </div>
 
-      <RouterLink to="/catalog-event">
-        <EventCard class="main-page__event-card"
-      /></RouterLink>
+      <Heading>Каталог событий</Heading>
 
-      <RouterLink to="/catalog-event">
-        <EventCard class="main-page__event-card"
-      /></RouterLink>
+      <div class="main-page__tabs">
+        <button
+          @click="activeTab = 'events'"
+          :class="{ active: activeTab === 'events' }"
+        >
+          Мероприятия
+        </button>
+        <button
+          @click="activeTab = 'games'"
+          :class="{ active: activeTab === 'games' }"
+        >
+          Игры
+        </button>
+      </div>
 
-      <RouterLink to="/catalog-event">
-        <EventCard class="main-page__event-card"
-      /></RouterLink>
+      <swiper class="main-page__swiper-wrap" :slides-per-view="1" navigation>
+        <swiper-slide v-if="activeTab === 'events'">
+          <div>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+          </div>
+        </swiper-slide>
+        <swiper-slide v-if="activeTab === 'games'">
+          <div>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+            <RouterLink to="/catalog-event">
+              <EventCard class="main-page__event-card" />
+            </RouterLink>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
 
     <div class="main-page__footer bg-color__black">
-      <BtnMain /> <BtnAccount />
+      <BtnMain />
+      <BtnAccount />
     </div>
   </div>
 </template>
 
 <script>
-import Heading from "@/components/Heading.vue";
-import HeadingName from "@/components/HeadingName.vue";
-
-import BtnAccount from "@/components/btn/BtnAccount.vue";
-import BtnMain from "@/components/btn/BtnMain.vue";
-import BtnCreationEvent from "@/components/btn/BtnCreationEvent.vue";
-import BtnRating from "@/components/btn/BtnRating.vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+// import "swiper/css";
+import "swiper/css/pagination";
+// import { Pagination } from "swiper/modules";
 
 import EventCard from "@/components/EventCard.vue";
+import Heading from "@/components/Heading.vue";
+
+import BtnCreationEvent from "@/components/btn/BtnCreationEvent.vue";
+import BtnRating from "@/components/btn/BtnRating.vue";
+import BtnMain from "@/components/btn/BtnMain.vue";
+import BtnAccount from "@/components/btn/BtnAccount.vue";
 
 export default {
   name: "MainPage",
-
   components: {
+    Swiper,
+    SwiperSlide,
     Heading,
-    HeadingName,
-    BtnAccount,
     BtnMain,
+    BtnAccount,
     EventCard,
     BtnCreationEvent,
     BtnRating,
+  },
+  data() {
+    return {
+      activeTab: "events",
+    };
   },
 };
 </script>
@@ -61,58 +119,62 @@ export default {
   overflow: hidden;
   justify-content: space-between;
 
-  &__photo {
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  &__name {
-    margin-bottom: 20px;
-  }
-
-  &__info {
+  &__swiper-wrap {
     overflow-y: scroll;
     overflow-x: hidden;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 10px 20px 10px;
+    height: 100vh;
+    padding: 20px 10px;
   }
 
-  &__wrap {
+  &__tabs {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 10px;
-  }
+    justify-content: center;
+    margin-bottom: 15px;
 
-  &__form-wrap {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 10px;
-    width: 100%;
-    padding: 0 10px;
+    button {
+      padding: 5px 20px;
+      margin: 0 5px;
+      color: #fff;
+      border: 1px solid #686868;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 500;
+
+      &.active {
+        background: #1aaee0;
+        border: none;
+      }
+    }
   }
 
   &__footer {
-    height: 70px;
     width: 100%;
+    height: 70px;
     padding: 20px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid rgb(255 255 255 / 37%);
-    // box-shadow: inset 1px 2px 5px 0px rgba(255, 255, 255, 0.207);
   }
 
-  &__event-card {
+  &__event-card,
+  &__game-card {
     margin-bottom: 10px;
-    width: 100%;
   }
 
   &__btn-creation-event {
     margin-bottom: 20px;
+  }
+
+  &__info {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 20px 10px;
   }
 }
 </style>

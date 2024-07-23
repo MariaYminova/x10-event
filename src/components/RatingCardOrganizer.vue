@@ -1,25 +1,25 @@
 <template>
-  <div class="rating-card-player">
-    <div class="rating-card-player__info">
-      <div class="rating-card-player__photo">
+  <div class="rating-card-organizer">
+    <div class="rating-card-organizer__info">
+      <div class="rating-card-organizer__photo">
         <UserPhoto />
       </div>
-      <HeadingName class="rating-card-player__name">
+      <HeadingName class="rating-card-organizer__name">
         {{ name }}
       </HeadingName>
     </div>
 
-    <div class="rating-card-player__statistical-wrap">
+    <div class="rating-card-organizer__statistical-wrap">
       <div
-        class="rating-card-player__statistical-block"
+        class="rating-card-organizer__statistical-block"
         :class="getBlockClass(index)"
         v-for="(stat, index) in stats" 
         :key="stat.name"
       >
-        <div class="rating-card-player__statistical-name">
+        <div class="rating-card-organizer__statistical-name">
           {{ stat.name }}
         </div>
-        <div class="rating-card-player__statistical-score">
+        <div class="rating-card-organizer__statistical-score">
            {{ stat.score }}
         </div>
       </div>
@@ -32,7 +32,7 @@ import UserPhoto from "@/components/UserPhoto.vue";
 import HeadingName from "@/components/HeadingName.vue";
 
 export default {
-  name: "RatingCardPlayer",
+  name: "RatingCardOrganizer",
   components: {
     UserPhoto,
     HeadingName,
@@ -67,7 +67,7 @@ export default {
 </script>
 
 <style lang="scss">
-.rating-card-player {
+.rating-card-organizer {
   border: 1px solid #f0f0f0;
   border-radius: 5px;
   padding: 10px;
