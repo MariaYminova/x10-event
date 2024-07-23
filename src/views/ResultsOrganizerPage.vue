@@ -10,17 +10,17 @@
           <span>Райан Гослинг</span>
         </HeadingName>
       </div>
-      <div class="results-organizer-page__comment">
-        <span class="results-organizer-page__comment-title">Комментарий</span>
-        <textarea class="results-organizer-page__comment-text bg-color__black" name="comment" rows="5" maxlength="200"
+      <div class="results-player-page__comment-container">
+        <span class="results-player-page__comment-title">Комментарий</span>
+        <textarea class="results-player-page__comment bg-color__black" name="comment" rows="5" maxlength="200"
           placeholder="Пример комментария"></textarea>
       </div>
-      <div class="results-organizer-page__rating">
-        <div class="results-organizer-page__rating-item">
+      <div class="results-organizer-page__rating-container">
+        <div class="results-organizer-page__rating">
           <span>Заинтересовал на - {{ interest }}</span>
           <input type="range" max="10" min="0" v-model="interest">
         </div>
-        <div class="results-organizer-page__rating-item">
+        <div class="results-organizer-page__rating">
           <span>Организовал на - {{ organized }}</span>
           <input type="range" max="10" min="0" v-model="organized">
         </div>
@@ -76,7 +76,7 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding:0 20px 20px;
+    padding: 0 20px 20px;
     flex: 1;
     overflow: auto;
   }
@@ -99,34 +99,33 @@ export default {
     margin-right: 15px;
   }
 
-  &__comment {
-    &-title {
-      display: block;
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
+  &__comment-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
 
-    &-text {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid #fff;
-      resize: none;
-      padding: 10px;
-      color: #fff;
-    }
+  &-comment {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    resize: none;
+    padding: 10px;
+    color: #fff;
+  }
+
+
+  &__rating-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   &__rating {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-
-    &-item {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+    gap: 8px;
   }
 
   &__footer {
