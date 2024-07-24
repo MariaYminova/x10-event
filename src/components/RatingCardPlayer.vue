@@ -9,7 +9,7 @@
       </HeadingName>
     </div>
 
-    <div class="rating-card-player__statistical-wrap">
+    <div v-if="stats" class="rating-card-player__statistical-wrap">
       <div
         class="rating-card-player__statistical-block"
         :class="getBlockClass(index)"

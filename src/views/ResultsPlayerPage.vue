@@ -61,7 +61,7 @@ export default {
 .results-player-page {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 146px);
+  height: calc(100% - 76px);
 
 
   &__content {
@@ -119,8 +119,6 @@ export default {
   }
 
   &__footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     height: 70px;
     padding: 20px 10px;
