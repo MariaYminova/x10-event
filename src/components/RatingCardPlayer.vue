@@ -1,5 +1,5 @@
 <template>
-  <div class="rating-card-player">
+  <div :class="['rating-card-player', { 'winner': isWinner }]">
     <div class="rating-card-player__info">
       <div class="rating-card-player__photo">
         <UserPhoto />
@@ -44,7 +44,11 @@ export default {
     },
     stats: {
       type: Array,
-      required: true,
+      required: false,
+    },
+    isWinner: {
+      type: Boolean,
+      required: false,
     },
   },
   data() {
@@ -73,6 +77,10 @@ export default {
   padding: 10px;
   width: 100%;
   margin-bottom: 20px;
+
+  &.winner {
+    border: 2px solid rgb(236, 214, 17);
+  }
 
   &__photo {
     border-radius: 50%;
