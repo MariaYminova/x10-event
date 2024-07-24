@@ -1,1 +1,0 @@
-import{_ as o,o as s,c as n,g as a}from"./index-PTU0QV79.js";const t={name:"Heading"},r={class:"heading color__orange"};function c(e,_,d,i,l,p){return s(),n("div",r,[a(e.$slots,"default")])}const g=o(t,[["render",c]]);export{g as H};
