@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as a,a as e,g as r}from"./index-ByrwcP36.js";const c={name:"TheForm"},n={class:"the-form"},_={class:"the-form__heading color"},l=e("textarea",{class:"the-form__input bg-color__black",name:"bio",rows:"5",maxlength:"200"},null,-1);function d(o,i,m,h,f,p){return t(),a("div",n,[e("div",_,[r(o.$slots,"default")]),l])}const $=s(c,[["render",d]]);export{$ as T};

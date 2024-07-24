@@ -1,0 +1,1 @@
+import{_ as o,o as a,c as s,g as n}from"./index-ByrwcP36.js";const t={name:"HeadingName"},c={class:"heading-name color"};function r(e,d,_,i,l,m){return a(),s("div",c,[n(e.$slots,"default")])}const f=o(t,[["render",r]]);export{f as H};
