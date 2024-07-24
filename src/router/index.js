@@ -64,6 +64,11 @@ const router = createRouter({
       name: 'participant-assessment',
       component: () => import('../views/ParticipantAssessment.vue'),
     },
+    {
+      path: '/rating-game-page',
+      name: 'rating-game-page',
+      component: () => import('../views/RatingGamePage.vue'),
+    },
   ],
 })
 
