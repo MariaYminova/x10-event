@@ -1,6 +1,26 @@
 <template>
   <div class="personal-results-event">
     <div class="personal-results-event__content">
+
+      <label>
+        <input type="checkbox" v-model="isOrganizer" /> Организатор
+      </label>
+
+      <div class="personal-results-event__top">
+        <h1 class="personal-results-event__title color__orange">
+          {{ isOrganizer ? 'Организатор' : 'Участник' }}
+        </h1>
+        <RouterLink v-if="isOrganizer" to="/creation-event-page" class="personal-results-event__btn">
+          Изменить карточку игры
+        </RouterLink>
+      </div>
+      <div v-if="isOrganizerOrPlayer" class="personal-results-event__participants">
+        <RouterLink :to="link" v-for="user in filteredUsers" :key="user.id">
+          <RatingCardPlayer class="personal-results-event__card" :name="user.name" />
+        </RouterLink>
+      </div>
+      <button type="button" class="personal-results-event__btn personal-results-event__btn--finish">Завершить игру</button>
+
       <div class="personal-results-event__top">
         <h1
           v-if="status === 'organizer'"
@@ -50,6 +70,7 @@
           Завершить игру
         </button></RouterLink
       >
+
     </div>
 
     <div class="personal-results-event__footer bg-color__black">
@@ -58,7 +79,10 @@
     </div>
   </div>
 </template>
+
 <script>
+
+import { ref, computed } from 'vue';
 import BtnMain from "@/components/btn/BtnMain.vue";
 import BtnAccount from "@/components/btn/BtnAccount.vue";
 import RatingCardPlayer from "@/components/RatingCardPlayer.vue";
@@ -70,6 +94,7 @@ export default {
     BtnMain,
     BtnAccount,
   },
+
   data() {
     return {
       users: {
@@ -140,9 +165,40 @@ export default {
       },
     };
   },
+
   setup() {
-    const status = "organizer";
+    const isOrganizer = ref(true);
+    const users = ref({
+      organizers: [
+        { id: 1, name: "Олег Олегович" },
+        { id: 2, name: "Иван Иванович" }
+      ],
+      players: [
+        { id: 1, name: "Петр Петрович" },
+        { id: 2, name: "Антон Антонович" }
+      ]
+    });
+
+    const status = computed(() => (isOrganizer.value ? 'organizer' : 'player'));
+
+    const isOrganizerOrPlayer = computed(() => status.value === 'organizer' || status.value === 'player');
+
+    const filteredUsers = computed(() => {
+      return isOrganizer.value ? users.value.players : users.value.organizers;
+    });
+
+    const link = computed(() => {
+      return isOrganizer.value ? '/results-player-page' : '/results-organizer-page';
+    });
+
     return {
+
+      isOrganizer,
+      users,
+      status,
+      isOrganizerOrPlayer,
+      filteredUsers,
+      link
       status,
     };
   },
@@ -155,10 +211,22 @@ export default {
   flex-direction: column;
   height: calc(100% - 76px);
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 20px 20px;
+    flex: 1;
+    overflow: auto;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 30px;
   }
 
   &__title {
@@ -169,6 +237,7 @@ export default {
   }
 
   &__btn {
+    width: fit-content;
     padding: 5px 30px;
     text-align: center;
     border-radius: 5px;
@@ -176,16 +245,20 @@ export default {
     font-size: 14px;
     border: 1px solid #ff7f00;
     color: #ffffff;
+
+    &--finish {
+      padding: 20px;
+    }
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 0 20px 20px;
-    flex: 1;
-    overflow: auto;
+
+  &__participants {
+    width: 100%;
   }
+
+  &__card {
+    width: 100%;
+   }
 
   &__footer {
     width: 100%;
