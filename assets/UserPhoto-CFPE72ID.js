@@ -1,1 +1,0 @@
-import{_ as s,o,c as t}from"./index-ByrwcP36.js";const e="/x10-event/assets/img-avatar-BuJF4KQM.jpg",r={name:"UserPhoto"},c={class:"user-photo",src:e,alt:""};function a(n,_,p,i,m,f){return o(),t("img",c)}const l=s(r,[["render",a]]);export{l as U};
