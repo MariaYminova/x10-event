@@ -44,11 +44,11 @@ export default {
     },
     stats: {
       type: Array,
-      required: true,
+      required: false,
     },
     isWinner: {
       type: Boolean,
-      required: true,
+      required: false,
     },
   },
   data() {

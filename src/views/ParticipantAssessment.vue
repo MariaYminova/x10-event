@@ -14,63 +14,19 @@
           Изменить карточку игры
         </RouterLink>
       </div>
-      <div v-if="isOrganizerOrPlayer" class="personal-results-event__participants">
+
+      <div class="personal-results-event__participants">
         <RouterLink :to="link" v-for="user in filteredUsers" :key="user.id">
           <RatingCardPlayer class="personal-results-event__card" :name="user.name" />
         </RouterLink>
       </div>
-      <button type="button" class="personal-results-event__btn personal-results-event__btn--finish">Завершить игру</button>
-
-      <div class="personal-results-event__top">
-        <h1
-          v-if="status === 'organizer'"
-          class="personal-results-event__title color__orange"
-        >
-          Организатор
-        </h1>
-        <h1
-          v-if="status === 'player'"
-          class="personal-results-event__title color__orange"
-        >
-          Участник
-        </h1>
-        <RouterLink
-          v-if="status === 'organizer'"
-          to="/creation-event-page"
-          class="personal-results-event__btn"
-        >
-          Изменить карточку игры
-        </RouterLink>
-      </div>
-
-      <div
-        v-if="status === 'organizer'"
-        class="personal-results-event__players"
-      >
-        <RouterLink
-          to="/results-player-page"
-          v-for="user in users.players"
-          :key="user.id"
-        >
-          <RatingCardPlayer class="rating-page__card" :name="user.name" />
-        </RouterLink>
-      </div>
-      <div v-if="status === 'player'" class="personal-results-event__players">
-        <RouterLink
-          to="/results-organizer-page"
-          v-for="user in users.organizers"
-          :key="user.id"
-        >
-          <RatingCardPlayer class="rating-page__card" :name="user.name" />
-        </RouterLink>
-      </div>
 
       <RouterLink to="/rating-game-page">
-        <button type="button" class="personal-results-event__btn">
+        <button type="button" class="personal-results-event__btn personal-results-event__btn--finish">
           Завершить игру
-        </button></RouterLink
-      >
-
+        </button>
+      </RouterLink>
+      
     </div>
 
     <div class="personal-results-event__footer bg-color__black">
@@ -80,8 +36,8 @@
   </div>
 </template>
 
-<script>
 
+<script>
 import { ref, computed } from 'vue';
 import BtnMain from "@/components/btn/BtnMain.vue";
 import BtnAccount from "@/components/btn/BtnAccount.vue";
@@ -94,78 +50,6 @@ export default {
     BtnMain,
     BtnAccount,
   },
-
-  data() {
-    return {
-      users: {
-        organizers: [
-          {
-            id: 1,
-            name: "Олег Олегович",
-            organizerStats: [
-              { games: "Игр проведено", score: 230 },
-              { events: "Мероприятий проведено", score: 10 },
-            ],
-            playerStats: [
-              { name: "Заработано", score: 12400 },
-              { name: "Предприятий", score: 33 },
-              { name: "Побед", score: 12 },
-              { name: "Игр сыграно", score: 204 },
-              { name: "Посетил мероприятий", score: 10 },
-            ],
-          },
-          {
-            id: 2,
-            name: "Иван Иванович",
-            organizerStats: [
-              { games: "Игр проведено", score: 230 },
-              { events: "Мероприятий проведено", score: 10 },
-            ],
-            playerStats: [
-              { name: "Заработано", score: 12400 },
-              { name: "Предприятий", score: 33 },
-              { name: "Побед", score: 12 },
-              { name: "Игр сыграно", score: 204 },
-              { name: "Посетил мероприятий", score: 10 },
-            ],
-          },
-        ],
-        players: [
-          {
-            id: 1,
-            name: "Петр Петрович",
-            organizerStats: [
-              { games: "Игр проведено", score: 230 },
-              { events: "Мероприятий проведено", score: 10 },
-            ],
-            playerStats: [
-              { name: "Заработано", score: 12400 },
-              { name: "Предприятий", score: 33 },
-              { name: "Побед", score: 12 },
-              { name: "Игр сыграно", score: 204 },
-              { name: "Посетил мероприятий", score: 10 },
-            ],
-          },
-          {
-            id: 2,
-            name: "Антон Антонович",
-            organizerStats: [
-              { games: "Игр проведено", score: 230 },
-              { events: "Мероприятий проведено", score: 10 },
-            ],
-            playerStats: [
-              { name: "Заработано", score: 12400 },
-              { name: "Предприятий", score: 33 },
-              { name: "Побед", score: 12 },
-              { name: "Игр сыграно", score: 204 },
-              { name: "Посетил мероприятий", score: 10 },
-            ],
-          },
-        ],
-      },
-    };
-  },
-
   setup() {
     const isOrganizer = ref(true);
     const users = ref({
@@ -181,10 +65,8 @@ export default {
 
     const status = computed(() => (isOrganizer.value ? 'organizer' : 'player'));
 
-    const isOrganizerOrPlayer = computed(() => status.value === 'organizer' || status.value === 'player');
-
     const filteredUsers = computed(() => {
-      return isOrganizer.value ? users.value.players : users.value.organizers;
+      return isOrganizer.value ? users.value.organizers : users.value.players;
     });
 
     const link = computed(() => {
@@ -192,18 +74,16 @@ export default {
     });
 
     return {
-
       isOrganizer,
       users,
-      status,
-      isOrganizerOrPlayer,
+    
       filteredUsers,
-      link
-      status,
+      link,
     };
   },
 };
 </script>
+
 
 <style lang="scss">
 .personal-results-event {
@@ -251,14 +131,13 @@ export default {
     }
   }
 
-
   &__participants {
     width: 100%;
   }
 
   &__card {
     width: 100%;
-   }
+  }
 
   &__footer {
     width: 100%;
