@@ -1,26 +1,55 @@
 <template>
   <div class="personal-results-event">
     <div class="personal-results-event__content">
-
       <div class="personal-results-event__top">
-        <h1 v-if="status === 'organizer'" class="personal-results-event__title color__orange">Организатор</h1>
-        <h1 v-if="status === 'player'" class="personal-results-event__title color__orange">Участник</h1>
-        <RouterLink v-if="status === 'organizer'" to="/creation-event-page" class="personal-results-event__btn">
+        <h1
+          v-if="status === 'organizer'"
+          class="personal-results-event__title color__orange"
+        >
+          Организатор
+        </h1>
+        <h1
+          v-if="status === 'player'"
+          class="personal-results-event__title color__orange"
+        >
+          Участник
+        </h1>
+        <RouterLink
+          v-if="status === 'organizer'"
+          to="/creation-event-page"
+          class="personal-results-event__btn"
+        >
           Изменить карточку игры
         </RouterLink>
       </div>
 
-      <div v-if="status === 'organizer'" class="personal-results-event__players">
-        <RouterLink to="/results-player-page" v-for="user in users.players" :key="user.id">
+      <div
+        v-if="status === 'organizer'"
+        class="personal-results-event__players"
+      >
+        <RouterLink
+          to="/results-player-page"
+          v-for="user in users.players"
+          :key="user.id"
+        >
           <RatingCardPlayer class="rating-page__card" :name="user.name" />
         </RouterLink>
       </div>
       <div v-if="status === 'player'" class="personal-results-event__players">
-        <RouterLink to="/results-organizer-page" v-for="user in users.organizers" :key="user.id">
+        <RouterLink
+          to="/results-organizer-page"
+          v-for="user in users.organizers"
+          :key="user.id"
+        >
           <RatingCardPlayer class="rating-page__card" :name="user.name" />
         </RouterLink>
       </div>
-      <button type="button" class="personal-results-event__btn">Завершить игру</button>
+
+      <RouterLink to="/rating-game-page">
+        <button type="button" class="personal-results-event__btn">
+          Завершить игру
+        </button></RouterLink
+      >
     </div>
 
     <div class="personal-results-event__footer bg-color__black">
@@ -30,7 +59,6 @@
   </div>
 </template>
 <script>
-import { ref } from 'vue';
 import BtnMain from "@/components/btn/BtnMain.vue";
 import BtnAccount from "@/components/btn/BtnAccount.vue";
 import RatingCardPlayer from "@/components/RatingCardPlayer.vue";
@@ -40,7 +68,7 @@ export default {
   components: {
     RatingCardPlayer,
     BtnMain,
-    BtnAccount
+    BtnAccount,
   },
   data() {
     return {
@@ -108,19 +136,18 @@ export default {
               { name: "Посетил мероприятий", score: 10 },
             ],
           },
-        ]
-      }
+        ],
+      },
     };
   },
   setup() {
     const status = "organizer";
     return {
-      status
+      status,
     };
-  }
+  },
 };
 </script>
-
 
 <style lang="scss">
 .personal-results-event {
@@ -150,7 +177,6 @@ export default {
     border: 1px solid #ff7f00;
     color: #ffffff;
   }
-
 
   &__content {
     display: flex;
