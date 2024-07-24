@@ -26,7 +26,7 @@
           соответствующий условий активизации.</ParagraphText>
       </div>
 
-      <RouterLink to="/" class="catalog-event__btn">Перейти в игру</RouterLink>
+      <RouterLink to="/participant-assessment" class="catalog-event__btn">Перейти в игру</RouterLink>
     </div>
 
     <div class="catalog-event__footer bg-color__black">
