@@ -1,0 +1,1 @@
+import{_ as e,o,c as t}from"./index-DBli1lwt.js";const c={name:"BtnSave"},s={class:"btn-save bg-color__blue color"};function n(a,r,_,p,l,i){return o(),t("div",s,"Сохранить")}const f=e(c,[["render",n]]);export{f as B};
