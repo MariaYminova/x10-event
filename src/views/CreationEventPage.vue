@@ -85,9 +85,11 @@
       </div>
 
       <div class="creation-event-page__form">
+
+        <RouterLink to="/participant-assessment">
         <button @click="addEvent" class="creation-event-page__button">
           Сохранить событие
-        </button>
+        </button></RouterLink>
       </div>
     </div>
 
