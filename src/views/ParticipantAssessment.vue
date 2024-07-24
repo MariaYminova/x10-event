@@ -76,7 +76,7 @@ export default {
     return {
       isOrganizer,
       users,
-    
+      status,
       filteredUsers,
       link,
     };
