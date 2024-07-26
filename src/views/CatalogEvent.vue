@@ -28,11 +28,6 @@
 
       <RouterLink to="/participant-assessment" class="catalog-event__btn">Перейти в игру</RouterLink>
     </div>
-
-    <div class="catalog-event__footer bg-color__black">
-      <BtnMain />
-      <BtnAccount />
-    </div>
   </div>
 </template>
 
@@ -121,17 +116,6 @@ export default {
     font-size: 14px;
     // box-shadow: 10px 5px 5px rgb(255, 255, 255);
     border: 1px solid #ff7f00;
-  }
-
-  &__footer {
-    width: 100%;
-    height: 70px;
-    padding: 20px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgb(255 255 255 / 37%);
-    // box-shadow: inset 1px 2px 5px 0px rgba(255, 255, 255, 0.207);
   }
 }
 </style>

@@ -28,11 +28,6 @@
       </div>
       <BtnSave />
     </div>
-
-    <div class="results-player-page__footer bg-color__black">
-      <BtnMain />
-      <BtnAccount />
-    </div>
   </div>
 </template>
 <script>
@@ -116,16 +111,6 @@ export default {
   &__results {
     display: flex;
     gap: 8px;
-  }
-
-  &__footer {
-    width: 100%;
-    height: 70px;
-    padding: 20px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgb(255 255 255 / 37%);
   }
 }
 </style>

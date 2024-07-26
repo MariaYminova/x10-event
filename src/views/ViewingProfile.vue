@@ -34,10 +34,6 @@
         >
       </div>
     </div>
-
-    <div class="viewing-profile__footer bg-color__black">
-      <BtnMain /> <BtnAccount />
-    </div>
   </div>
 </template>
 
@@ -141,16 +137,6 @@ export default {
     margin: 20px 10px;
     width: 100%;
     padding: 0 10px;
-  }
-
-  &__footer {
-    width: 100%;
-    height: 70px;
-    padding: 20px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgb(255 255 255 / 37%);
   }
 }
 </style>

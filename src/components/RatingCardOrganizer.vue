@@ -124,16 +124,6 @@ export default {
     font-size: 12px;
     font-weight: 500;
   }
-
-  &__footer {
-    width: 100%;
-    height: 70px;
-    padding: 20px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgb(255 255 255 / 37%);
-  }
 }
 
 .block-color-1 {

@@ -68,11 +68,6 @@
         </swiper-slide>
       </swiper>
     </div>
-
-    <div class="main-page__footer bg-color__black">
-      <BtnMain />
-      <BtnAccount />
-    </div>
   </div>
 </template>
 
@@ -147,16 +142,6 @@ export default {
         border: none;
       }
     }
-  }
-
-  &__footer {
-    width: 100%;
-    height: 70px;
-    padding: 20px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgb(255 255 255 / 37%);
   }
 
   &__event-card,

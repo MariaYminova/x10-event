@@ -2,6 +2,7 @@
   <div class="container">
     <TheHeader />
     <RouterView />
+    <TheFooter/>
     <div class="container__background-color">
 
     </div>
@@ -10,10 +11,12 @@
 
 <script>
 import TheHeader from "@/components/TheHeader.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 export default {
   components: {
     TheHeader,
+    TheFooter,
   },
 };
 </script>

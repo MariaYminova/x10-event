@@ -13,10 +13,6 @@
         <TheForm> Ваши навыки</TheForm>
       </div>
     </div>
-
-    <div class="registration-page__footer bg-color__black">
-      <RouterLink to="/event-flag"><BtnSave /></RouterLink>
-    </div>
   </div>
 </template>
 
@@ -75,17 +71,6 @@ export default {
     margin: 20px 10px;
     width: 100%;
     padding: 0 10px;
-  }
-
-  &__footer {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 10px;
-    border-top: 1px solid rgb(255 255 255 / 37%);
-    // box-shadow: inset 1px 2px 5px 0px rgba(255, 255, 255, 0.207);
   }
 }
 </style>
