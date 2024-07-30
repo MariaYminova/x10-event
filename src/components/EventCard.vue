@@ -1,22 +1,19 @@
 <template>
   <div class="event-card">
-    <div class="event-card__left-wrap">
-      <div class="event-card__photo-block">
-        <img class="event-card__img" src="@/img/event-img.jpg" alt="#" />
-      </div>
-
-      <div class="event-card__data">
-        <div class="event-card__name">Сила Воли</div>
-
-        <div class="event-card__place">
-          <div class="event-card__city color__gray">Москва</div>
-          <div class="event-card__date color__gray">01.08.2024</div>
-        </div>
-      </div>
+    <div class="event-card__photo-block">
+      <img class="event-card__img" src="@/img/event-img.jpg" alt="#" />
     </div>
 
-    <div class="event-card__access">
-      <img src="@/icons/icon-onlock.svg" alt="" />
+    <div class="event-card__data-wrap">
+      <div class="event-card__top">
+        <div class="event-card__name">Рыбаков. Игра на миллиард</div>
+        <img class="event-card__access" src="@/icons/icon-lock.svg" alt="" />
+      </div>
+
+      <div class="event-card__place">
+        <div class="event-card__city color__gray">Москва</div>
+        <div class="event-card__date color__gray">01.08.2024</div>
+      </div>
     </div>
   </div>
 </template>
@@ -30,37 +27,39 @@ export default {
 <style lang="scss">
 .event-card {
   display: flex;
-  border: 1px solid #97959d;
+  border: 1px solid #ffffff30;
+  background-color: rgba(22, 22, 29, 0.2);
   padding: 10px;
   border-radius: 5px;
   width: 100%;
+  height: 85px;
   align-items: center;
-  justify-content: space-between;
 
   &__photo-block {
-    border-radius: 5px;
-    width: 100px;
+    width: 72px;
     height: 85px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: -10px 10px -10px -10px;
+    margin: -11px 17px -11px -11px;
   }
 
   &__img {
-    width: 100%;
+    width: 72px;
     height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 5px;
   }
 
-  &__left-wrap{
+  &__data-wrap {
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  &__top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    height: 36px;
   }
 
   &__data {
@@ -68,8 +67,10 @@ export default {
   }
 
   &__name {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Rothek", Arial;
+    line-height: 19.8px;
   }
 
   &__place {
@@ -78,11 +79,11 @@ export default {
   }
 
   &__city {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   &__date {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   &__access {

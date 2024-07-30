@@ -1,7 +1,6 @@
 <template>
   <div class="results-organizer-page">
     <div class="results-organizer-page__content">
-      <Heading>Итоги организатора</Heading>
       <div class="results-organizer-page__info">
         <div class="results-organizer-page__photo">
           <UserPhoto />
@@ -36,7 +35,6 @@
 </template>
 <script>
 import { ref } from 'vue';
-import Heading from "@/components/Heading.vue";
 import UserPhoto from "@/components/UserPhoto.vue";
 import HeadingName from "@/components/HeadingName.vue";
 import BtnSave from "@/components/btn/BtnSave.vue";
@@ -46,7 +44,6 @@ import BtnAccount from "@/components/btn/BtnAccount.vue";
 export default {
   name: "ResultsorganizerPage",
   components: {
-    Heading,
     UserPhoto,
     HeadingName,
     BtnSave,

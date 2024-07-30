@@ -1,8 +1,6 @@
 <template>
   <div class="creation-event-page">
     <div class="creation-event-page__info">
-      <Heading>Создание события</Heading>
-
       <div class="creation-event-page__form">
         <div class="creation-event-page__heading color">Изображение</div>
         <input
@@ -101,14 +99,12 @@
 
 <script>
 import { ref, computed } from "vue";
-import Heading from "@/components/Heading.vue";
 import BtnAccount from "@/components/btn/BtnAccount.vue";
 import BtnMain from "@/components/btn/BtnMain.vue";
 
 export default {
   name: "CreationEventPage",
   components: {
-    Heading,
     BtnAccount,
     BtnMain,
   },

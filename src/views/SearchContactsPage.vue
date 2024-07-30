@@ -1,8 +1,6 @@
 <template>
   <div class="search-contacts-page">
     <div class="search-contacts-page__info">
-      <Heading>Список участников</Heading>
-
 
       <input
         v-model="searchQuery"
@@ -29,7 +27,6 @@
 </template>
 
 <script>
-import Heading from "@/components/Heading.vue";
 import ContactsCard from "@/components/ContactsCard.vue";
 
 import BtnAccount from "@/components/btn/BtnAccount.vue";
@@ -39,7 +36,6 @@ export default {
   name: "SearchContactsPage",
 
   components: {
-    Heading,
     BtnAccount,
     BtnMain,
     ContactsCard,

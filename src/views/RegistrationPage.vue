@@ -1,7 +1,6 @@
 <template>
   <div class="registration-page">
     <div class="registration-page__info">
-      <Heading> Регистрация аккаунта </Heading>
       <div class="registration-page__photo"><UserPhoto /></div>
 
       
@@ -21,7 +20,6 @@
 </template>
 
 <script>
-import Heading from "@/components/Heading.vue";
 import UserPhoto from "@/components/UserPhoto.vue";
 import HeadingName from "@/components/HeadingName.vue";
 import TheForm from "@/components/forms/TheForm.vue";
@@ -31,7 +29,6 @@ export default {
   name: "RegistrationPage",
 
   components: {
-    Heading,
     UserPhoto,
     HeadingName,
     TheForm,

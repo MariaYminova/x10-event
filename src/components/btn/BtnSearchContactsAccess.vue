@@ -3,7 +3,7 @@
     <div class="btn-search-contacts-access color" @click="openPopup">
       <img
         class="btn-search-contacts-access__icon"
-        src="@/icons/icon-offlock.svg"
+        src="@/icons/icon-lock.svg"
         alt="#"
       />
        Контакты участников

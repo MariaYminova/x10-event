@@ -1,7 +1,6 @@
 <template>
   <div class="catalog-event">
     <div class="catalog-event__info">
-      <Heading> Игра </Heading>
       <div class="catalog-event__photo">
         <EventImg />
       </div>
@@ -37,7 +36,6 @@
 </template>
 
 <script>
-import Heading from "@/components/Heading.vue";
 import EventImg from "@/components/EventImg.vue";
 
 import HeadingName from "@/components/HeadingName.vue";
@@ -55,7 +53,6 @@ export default {
   name: "CatalogEvent",
 
   components: {
-    Heading,
     EventImg,
     HeadingName,
     HeadingGray,

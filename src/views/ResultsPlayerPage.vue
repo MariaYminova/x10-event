@@ -1,7 +1,6 @@
 <template>
   <div class="results-player-page">
     <div class="results-player-page__content">
-      <Heading>Итоги игрока</Heading>
       <div class="results-player-page__info">
         <div class="results-player-page__photo">
           <UserPhoto />
@@ -36,7 +35,6 @@
   </div>
 </template>
 <script>
-import Heading from "@/components/Heading.vue";
 import UserPhoto from "@/components/UserPhoto.vue";
 import HeadingName from "@/components/HeadingName.vue";
 import BtnSave from "@/components/btn/BtnSave.vue";
@@ -46,7 +44,6 @@ import BtnAccount from "@/components/btn/BtnAccount.vue";
 export default {
   name: "ResultsPlayerPage",
   components: {
-    Heading,
     UserPhoto,
     HeadingName,
     BtnSave,

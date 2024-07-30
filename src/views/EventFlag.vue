@@ -1,7 +1,6 @@
 <template>
   <div class="event-flag">
     <div class="event-flag__info">
-      <Heading> Мероприятие </Heading>
       <div class="event-flag__photo"><EventImg /></div>
 
       <HeadingName style="margin-bottom: 10px"> Сила духа</HeadingName>
@@ -34,7 +33,6 @@
 </template>
 
 <script>
-import Heading from "@/components/Heading.vue";
 import EventImg from "@/components/EventImg.vue";
 
 import HeadingName from "@/components/HeadingName.vue";
@@ -51,7 +49,6 @@ export default {
   name: "EventFlag",
 
   components: {
-    Heading,
     EventImg,
     HeadingName,
     HeadingGray,

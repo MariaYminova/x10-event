@@ -1,3 +1,13 @@
+
+@font-face {
+  font-family: 'Rothek';
+  src: url('@/assets/fonts/Groteskly Yours - Rothek Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 html,
 body,
 div,
@@ -104,7 +114,7 @@ section {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", Arial;
   min-width: 320px;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;

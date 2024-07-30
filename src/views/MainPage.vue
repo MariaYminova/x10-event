@@ -6,8 +6,6 @@
         <BtnRating />
       </div>
 
-      <Heading>Каталог событий</Heading>
-
       <div class="main-page__tabs">
         <button
           @click="activeTab = 'events'"
@@ -83,7 +81,6 @@ import "swiper/css/pagination";
 // import { Pagination } from "swiper/modules";
 
 import EventCard from "@/components/EventCard.vue";
-import Heading from "@/components/Heading.vue";
 
 import BtnCreationEvent from "@/components/btn/BtnCreationEvent.vue";
 import BtnRating from "@/components/btn/BtnRating.vue";
@@ -95,7 +92,6 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    Heading,
     BtnMain,
     BtnAccount,
     EventCard,
@@ -161,7 +157,7 @@ export default {
 
   &__event-card,
   &__game-card {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   &__btn-creation-event {

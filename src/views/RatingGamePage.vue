@@ -1,6 +1,5 @@
 <template>
   <div class="rating-game-page">
-    <Heading> Рейтинг Игры </Heading>
     <div class="rating-game-page__tabs">
       <button
         @click="activeTab = 'players'"
@@ -45,7 +44,6 @@
 </template>
 
 <script>
-import Heading from "@/components/Heading.vue";
 import UserPhoto from "@/components/UserPhoto.vue";
 import HeadingName from "@/components/HeadingName.vue";
 import RatingCardPlayer from "@/components/RatingCardPlayer.vue";
@@ -57,7 +55,6 @@ import BtnAccount from "@/components/btn/BtnAccount.vue";
 export default {
   name: "RatingGamePage",
   components: {
-    Heading,
     UserPhoto,
     HeadingName,
     BtnMain,
