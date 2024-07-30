@@ -13,7 +13,6 @@ export default {
   name: "TheHeader",
 
   components: {
-
   },
 
   setup() {
@@ -22,6 +21,7 @@ export default {
     const pageTitle = computed(() => {
       switch (route.name) {
         case 'main-page':
+
           return 'главная';
 
         case 'registration-page':
